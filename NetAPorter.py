@@ -17,7 +17,7 @@ class NetAPorter:
     def readAndPreprocess(self):
         
         print('===============Started reading JSON===============')
-        total_data = pd.read_json(self.path, lines=False)
+        total_data = pd.read_json(self.path, lines=True)
         print('==============Completed reading JSON==============')
         
         total_data['_id'] = total_data['_id'].transform(lambda value: value.get('$oid'))
