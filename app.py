@@ -9,7 +9,7 @@ import gc
 url = 'https://greendeck-datasets-2.s3.amazonaws.com/netaporter_gb_similar.json'
 
 # Importing the class
-netaporter = NetAPorter(path = 'dumps/netaporter_gb.json')
+netaporter = NetAPorter(path = url)
 
 # Create Flask application
 app = flask.Flask(__name__)
