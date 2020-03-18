@@ -16,7 +16,7 @@ app = flask.Flask(__name__)
 CORS(app)
 
 # Index page
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['POST'])
 def home():
     result = jsonify(netaporter.readQuery(request.get_json()))
     print('Garbage Collector:', gc.collect())
