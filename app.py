@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify, render_template
 from NetAPorter import NetAPorter
 from flask_cors import CORS
 import flask
-import os
 import gc
 
 url = 'https://greendeck-datasets-2.s3.amazonaws.com/netaporter_gb_similar.json'
