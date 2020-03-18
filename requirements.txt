@@ -6,4 +6,4 @@ MarkupSafe==1.1.1
 Werkzeug==0.15.5
 numpy>=1.9.2
 pandas>=0.19
-urllib==1.24.2
+urllib
