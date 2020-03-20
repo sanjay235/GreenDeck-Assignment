@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify, render_template
 from NetAPorter import NetAPorter
 from flask_cors import CORS
 import flask
-import gc
 
 url = 'https://greendeck-datasets-2.s3.amazonaws.com/netaporter_gb_similar.json'
 
@@ -16,9 +15,7 @@ CORS(app)
 # Index page
 @app.route('/', methods=['POST'])
 def home():
-    result = jsonify(netaporter.readQuery(request.get_json()))
-    print('Garbage Collector:', gc.collect())
-    return result
+    return jsonify(netaporter.readQuery(request.get_json()))
 
 # RUN FLASK APPLICATION
 if __name__ == '__main__':
