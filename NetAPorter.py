@@ -1,5 +1,4 @@
 import pandas as pd
-import gc
 
 OPERAND_1_DISCOUNT = 'discount'
 OPERAND_1_BRAND_NAME = 'brand.name'
@@ -38,7 +37,6 @@ class NetAPorter:
         self.data = total_data[ required_columns ].copy()
 
         total_data, required_columns = None, None
-        gc.collect()
 
     def readQuery(self, json_dict):
 
